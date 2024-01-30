@@ -8,8 +8,8 @@ const Header = () => {
             <StyledHeader.HeaderNavigation>
                 <StyledHeader.HeaderNavigationItemLeft>
                     <img src={ cinemaLogo } alt="Cinema Logo"/>
-                    <div>Профиль</div>
-                    <div>Билеты</div>
+                    <StyledHeader.HeaderNavLink to='/profile'>Профиль</StyledHeader.HeaderNavLink>
+                    <StyledHeader.HeaderNavLink to='/tickets'>Билеты</StyledHeader.HeaderNavLink>
                 </StyledHeader.HeaderNavigationItemLeft>
                 <StyledHeader.HeaderNavigationItemRight>
                     <img src={ exitIcon } alt="Exit Icon"/>

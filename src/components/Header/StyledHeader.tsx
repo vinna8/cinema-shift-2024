@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderNavigation = styled.div`
     margin: auto;
@@ -21,6 +22,13 @@ export const HeaderNavigationItemRight = styled.div`
     align-items: center;
     gap: 16px;
 `;
+
+//вынести в глобальный
+export const HeaderNavLink = styled(NavLink)`
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+`
 
 export const Line = styled.div`
     border-bottom: 1px solid #CED2DA;
