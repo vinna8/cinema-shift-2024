@@ -1,11 +1,14 @@
 import Header from './components/Header/Header'
 import Routers from './route/Routers'
+import './App.css'
 
 const App = () => {
-  return (
+  return ( 
     <>
       <Header />
-      <Routers />
+      <div className='container'>
+        <Routers />
+      </div>
     </>
   )
 }
