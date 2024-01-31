@@ -36,3 +36,64 @@ export const FilmContry = styled.div`
     font-size: 14px;
     color: #141C24;
 `
+
+export const FilmCurrent = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+`
+
+export const FilmDecriptionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+`
+
+export const FilmTitle = styled.div`
+    font-weight: 700;
+    font-size: 32px;
+`
+
+export const FilmTimeLabel = styled.label`
+    padding: 10px 16px 10px 16px;
+    border: 1px solid #CED2DA;
+    border-radius: 14px;
+`
+
+export const PlaceContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+`
+
+export const SelectedPlaceContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+`
+
+export const Title = styled.div`
+    margin-top: 48px;
+    font-weight: 700;
+    font-size: 24px;
+`
+
+export const TimeSessionInHallContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+`
+
+export const TimeSessionInHall = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+`
+
+export const Screen = styled.div`
+    width: 409px;
+    height: 3px;
+    border: 1px solid #CED2DA;
+    border-radius: 16px;
+    background-color: #CED2DA;
+`
