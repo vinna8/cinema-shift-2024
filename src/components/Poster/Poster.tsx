@@ -1,16 +1,14 @@
-import Rating from "../Rating/Rating";
-import * as StyledPoster from '../Poster/StyledPoster'
-import Cover from "../Film/Cover";
+import Rating from "../FilmInfo/Rating/Rating";
+import * as StyledPoster from '../../style/StyledPoster';
+import Cover from "../FilmInfo/Cover";
 import Button from "../UI-kit/Button";
+import FilmName from "../FilmInfo/FilmName";
 
 const Poster = () => {
     return (
         <StyledPoster.PosterContainer>
             <Cover />
-            <div>
-                <StyledPoster.PosterTitleFilm>Title</StyledPoster.PosterTitleFilm>
-                <StyledPoster.PosterSubtitleFilm>Subtitle</StyledPoster.PosterSubtitleFilm>
-            </div>
+            <FilmName fontSize="20px"/>
             <Rating />
             <Button text="Подробнее" />
         </StyledPoster.PosterContainer>

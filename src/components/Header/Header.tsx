@@ -1,21 +1,21 @@
 import cinemaLogo from '../../assets/cinema-logo.svg';
 import exitIcon from '../../assets/exit-icon.svg';
-import * as StyledHeader from './StyledHeader';
+import * as StyledHeader from '../../style/StyledHeader';
 
 const Header = () => {
     return (
         <>
-            <StyledHeader.HeaderNavigation>
-                <StyledHeader.HeaderNavigationItemLeft>
+            <StyledHeader.Navigation>
+                <StyledHeader.NavigationItemLeft>
                     <img src={ cinemaLogo } alt="Cinema Logo"/>
-                    <StyledHeader.HeaderNavLink to='/profile'>Профиль</StyledHeader.HeaderNavLink>
-                    <StyledHeader.HeaderNavLink to='/tickets'>Билеты</StyledHeader.HeaderNavLink>
-                </StyledHeader.HeaderNavigationItemLeft>
-                <StyledHeader.HeaderNavigationItemRight>
+                    <StyledHeader.Link to='/profile'>Профиль</StyledHeader.Link>
+                    <StyledHeader.Link to='/tickets'>Билеты</StyledHeader.Link>
+                </StyledHeader.NavigationItemLeft>
+                <StyledHeader.NavigationItemRight>
                     <img src={ exitIcon } alt="Exit Icon"/>
                     <div>Выйти</div>
-                </StyledHeader.HeaderNavigationItemRight>
-            </StyledHeader.HeaderNavigation>
+                </StyledHeader.NavigationItemRight>
+            </StyledHeader.Navigation>
             <StyledHeader.Line></StyledHeader.Line>
         </>
     )

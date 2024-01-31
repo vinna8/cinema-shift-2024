@@ -1,13 +1,13 @@
-import * as StyledFilm from '../Film/StyledFilm';
+import * as StyledFilm from '../../style/StyledFilm';
 
 const Time = () => {
     return (
         <>
             <div>Красный зал</div>
-            <StyledFilm.TimeSessionInHall>
-                <StyledFilm.FilmTimeLabel>11:15</StyledFilm.FilmTimeLabel>
-                <StyledFilm.FilmTimeLabel>11:15</StyledFilm.FilmTimeLabel>
-            </StyledFilm.TimeSessionInHall>
+            <StyledFilm.TimeSessions>
+                <StyledFilm.TimeLabel>11:15</StyledFilm.TimeLabel>
+                <StyledFilm.TimeLabel>11:15</StyledFilm.TimeLabel>
+            </StyledFilm.TimeSessions>
         </>
     )
 }

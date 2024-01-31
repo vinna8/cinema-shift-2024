@@ -1,6 +1,6 @@
-import Star from "./Star"
+import Star from "./Star";
 
-const Stars = () => {
+const StarList = () => {
     const numberStar = 5;
 
     return (
@@ -12,4 +12,4 @@ const Stars = () => {
     )
 }
 
-export default Stars;
+export default StarList;

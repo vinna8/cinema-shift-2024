@@ -1,12 +1,12 @@
-import * as StyledFilm from '../Film/StyledFilm';
-import Times from './Times';
+import * as StyledUIKit from '../../style/StyledUIKit';
+import TimeList from './TimeList';
 
 const Timetable = () => {
     return (
-        <>
-            <StyledFilm.Title>Расписание</StyledFilm.Title>
-            <Times />
-        </>
+        <div>
+            <StyledUIKit.Title>Расписание</StyledUIKit.Title>
+            <TimeList />
+        </div>
     )
 }
 

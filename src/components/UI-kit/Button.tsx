@@ -1,4 +1,4 @@
-import * as StyledUIKit from '../UI-kit/StyledUIKit';
+import * as StyledUIKit from '../../style/StyledUIKit';
 
 const Button = ({ text }: { text: string }) => {
     return (
