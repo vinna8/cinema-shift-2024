@@ -1,4 +1,4 @@
-const Tickets = () => {
+const Tickets: React.FC = () => {
     return (
         <>
             Билеты

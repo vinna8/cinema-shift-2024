@@ -8,10 +8,11 @@ import Tickets from '../components/Tickets/Tickets';
 const Routers = () => {
     return (
         <Routes>
+            <Route path='/' element={<PosterContent />}/>
             <Route path='/poster' element={<PosterContent />}/>
             <Route path='/tickets' element={<Tickets />}/>
             <Route path='/profile' element={<Profile />}/>
-            <Route path='/film' element={<Film />}/>
+            <Route path='/film/:id' element={<Film />}/>
         </Routes>
     )
 }

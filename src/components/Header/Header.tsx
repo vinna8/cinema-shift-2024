@@ -2,7 +2,7 @@ import cinemaLogo from '../../assets/cinema-logo.svg';
 import exitIcon from '../../assets/exit-icon.svg';
 import * as StyledHeader from '../../style/StyledHeader';
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <>
             <StyledHeader.Navigation>

@@ -1,11 +1,16 @@
 import StarList from "./StarList";
 import * as StyledFilmInfo from '../../../style/StyledFilmInfo';
+import { Film } from "../../../types/types";
 
-const Rating = () => {
+interface FilmProps {
+    film: Film;
+}
+
+const Rating: React.FC<FilmProps> = ({ film }) => {
     return (
         <div>
-            <StarList />
-            <StyledFilmInfo.RatingText>Kinopoisk - 8.4</StyledFilmInfo.RatingText>
+            <StarList film={film}/>
+            <StyledFilmInfo.RatingText>Kinopoisk - {film.userRatings.kinopoisk}</StyledFilmInfo.RatingText>
         </div>
     )
 }

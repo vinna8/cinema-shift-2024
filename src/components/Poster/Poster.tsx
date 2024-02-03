@@ -3,20 +3,32 @@ import * as StyledPoster from '../../style/StyledPoster';
 import Cover from "../FilmInfo/Cover";
 import Button from "../UI-kit/Button";
 import FilmName from "../FilmInfo/FilmName";
-import { useEffect } from "react";
-import { getPoster } from "../../api/api";
+import { Film } from "../../types/types";
+import { useDispatch } from "react-redux";
+import { getFilm } from "../../redux/action/filmByIdAction";
+import { useNavigate } from 'react-router-dom';
+import { getSchedule } from "../../redux/action/scheduleFilm";
 
-const Poster = () => {
-    useEffect(() => {
-        getPoster()
-    }, [])
+interface PosterProps {
+    film: Film;
+}
+
+const Poster: React.FC<PosterProps> = ({ film }) => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate(); 
+
+    const handleButtonClick = () => {
+        dispatch(getFilm(film.id));
+        dispatch(getSchedule(film.id));
+        navigate(`/film/${film.id}`);
+    }
 
     return (
         <StyledPoster.PosterContainer>
-            <Cover />
-            <FilmName fontSize="20px"/>
-            <Rating />
-            <Button text="Подробнее" />
+            <Cover film={film}/>
+            <FilmName film={film} fontSize="20px"/>
+            <Rating film={film}/>
+            <Button onClick={handleButtonClick}>Подробнее</Button>
         </StyledPoster.PosterContainer>
     )
 }

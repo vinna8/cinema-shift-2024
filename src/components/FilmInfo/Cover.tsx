@@ -1,12 +1,17 @@
 import * as StyledFilmInfo from '../../style/StyledFilmInfo';
+import { Film } from '../../types/types';
 
-const Cover = () => {
+interface FilmProps {
+    film: Film;
+}
+
+const Cover: React.FC<FilmProps> = ({ film }) => {
     return (
         <StyledFilmInfo.CoverContainer>
-            <StyledFilmInfo.FilmImage src="" alt="" />
+            <StyledFilmInfo.FilmImage src={`https://shift-backend.onrender.com${film.img}`} alt="" />
             <StyledFilmInfo.FilmInfo>
-                <StyledFilmInfo.FilmGenre>фантастика</StyledFilmInfo.FilmGenre>
-                <StyledFilmInfo.FilmContry>США, 2023</StyledFilmInfo.FilmContry>
+                <StyledFilmInfo.FilmGenre>{film.genres[0]}</StyledFilmInfo.FilmGenre>
+                <StyledFilmInfo.FilmContry>{film.country.name}</StyledFilmInfo.FilmContry>
             </StyledFilmInfo.FilmInfo>
         </StyledFilmInfo.CoverContainer>
     )

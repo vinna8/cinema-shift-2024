@@ -1,9 +1,24 @@
-import * as StyledUIKit from '../../style/StyledUIKit';
+import styled from 'styled-components';
 
-const Button = ({ text }: { text: string }) => {
-    return (
-        <StyledUIKit.Button>{ text }</StyledUIKit.Button>
-    )
+interface ButtonProps {
+    children: React.ReactNode;
+    onClick?: () => void;
+}
+
+const Button: React.FC<ButtonProps> = ({children, onClick}) => {
+    return <ButtonMain onClick={onClick}>{ children }</ButtonMain>
 }
 
 export default Button;
+
+export const ButtonMain = styled.button`
+    width: 300px;
+    height: 56px;
+    border: none;
+    border-radius: 16px;
+    background-color: #9534D2;
+    color: #ffffff;
+    font-weight: 600;
+    size: 16px;
+    cursor: pointer;
+`

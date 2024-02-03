@@ -5,8 +5,8 @@ export const CoverContainer = styled.div`
 `
 
 export const FilmImage = styled.img`
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     border-radius: 8px; 
     border-bottom-right-radius: 0;  
 `

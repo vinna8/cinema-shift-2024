@@ -1,20 +1,43 @@
 import Time from './Time';
 import * as StyledFilm from '../../style/StyledFilm';
+import * as selectors from "../../redux/selectors";
+import { useSelector } from "react-redux";
+import { useState, useEffect } from 'react';
 
-const TimeList = () => {
+const TimeList: React.FC = () => {
+    const schedules = useSelector(selectors.schedules);
+    const [activeTab, setActiveTab] = useState<{ [key: string]: boolean }>({});
+    const [selectedDate, setSelectedDate] = useState<any>(''); 
+
+    useEffect(() => {
+        if (schedules && schedules.length > 0) {
+            setActiveTab({ [schedules[0].date]: true });
+            setSelectedDate(schedules[0]);
+        }
+    }, [schedules]);
+
+    const handleTabClick = (schedule: any) => {
+        setActiveTab((prevActiveTab) => ({
+            [schedule.date]: !prevActiveTab[schedule.date],
+        }))
+        setSelectedDate(schedule);
+    }
+
     return (
         <>
             <StyledFilm.DataTab>
-                <StyledFilm.ItemTab className="active">
-                    Tab Item
-                </StyledFilm.ItemTab>
-                <StyledFilm.ItemTab>
-                    Tab Item
-                </StyledFilm.ItemTab>
+                {schedules && schedules.map((schedule: any) =>
+                    <StyledFilm.ItemTab 
+                        key={schedule.date} 
+                        onClick={() => handleTabClick(schedule)} 
+                        className={activeTab[schedule.date] ? 'active' : ''}
+                    >
+                        {schedule.date}
+                    </StyledFilm.ItemTab>
+                )}
             </StyledFilm.DataTab>
             <StyledFilm.TimeSessionsContainer>
-                <Time />
-                <Time />
+                {selectedDate && <Time schedule={selectedDate}/>}
             </StyledFilm.TimeSessionsContainer>
         </>
     )

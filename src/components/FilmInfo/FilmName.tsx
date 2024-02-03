@@ -1,10 +1,16 @@
 import * as StyledFilmInfo from '../../style/StyledFilmInfo';
+import { Film } from '../../types/types';
 
-const FilmName = ({fontSize}: {fontSize: string}) => {
+interface FilmProps {
+    fontSize: string;
+    film: Film;
+}
+
+const FilmName: React.FC<FilmProps> = ({ fontSize, film }) => {
     return (
         <div>
-            <StyledFilmInfo.FilmTitle fontSize={ fontSize }>Title</StyledFilmInfo.FilmTitle>
-            <StyledFilmInfo.FilmSubtitle>Subtitle</StyledFilmInfo.FilmSubtitle>
+            <StyledFilmInfo.FilmTitle fontSize={ fontSize }>{film.name}</StyledFilmInfo.FilmTitle>
+            <StyledFilmInfo.FilmSubtitle>{film.originalName}</StyledFilmInfo.FilmSubtitle>
         </div>
     )
 }
