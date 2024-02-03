@@ -5,6 +5,7 @@ export const PosterListContainer = styled.div`
     flex-direction: row;
     gap: 32px;
     flex-wrap: wrap;
+    justify-content: center; 
 `
 
 export const PosterContainer = styled.div`
@@ -12,4 +13,5 @@ export const PosterContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: center;
 `

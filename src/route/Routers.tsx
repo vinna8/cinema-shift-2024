@@ -4,15 +4,16 @@ import Film from '../components/Film/Film';
 import PosterContent from '../components/Poster/PosterContent';
 import Profile from '../components/Profile/Profille';
 import Tickets from '../components/Tickets/Tickets';
+import { ROUTES } from '../utils/constants/router';
 
 const Routers = () => {
     return (
         <Routes>
-            <Route path='/' element={<PosterContent />}/>
-            <Route path='/poster' element={<PosterContent />}/>
-            <Route path='/tickets' element={<Tickets />}/>
-            <Route path='/profile' element={<Profile />}/>
-            <Route path='/film/:id' element={<Film />}/>
+            <Route path={ROUTES.MAIN} element={<PosterContent />}/>
+            <Route path={ROUTES.POSTER} element={<PosterContent />}/>
+            <Route path={ROUTES.TICKETS} element={<Tickets />}/>
+            <Route path={ROUTES.PROFILE} element={<Profile />}/>
+            <Route path={ROUTES.FILM} element={<Film />}/>
         </Routes>
     )
 }

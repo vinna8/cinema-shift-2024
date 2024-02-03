@@ -1,11 +1,14 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import * as selectors from "../../redux/selectors";
+
+import { Film } from "../../types/types";
+import { getFilmToday } from "../../redux/action/cinemaTodayAction";
+
 import Poster from "./Poster";
+
 import * as StyledPoster from '../../style/StyledPoster';
 import * as StyledUIKit from '../../style/StyledUIKit';
-import { useDispatch, useSelector } from "react-redux";
-import { getFilmToday } from "../../redux/action/cinemaTodayAction";
-import { useEffect } from "react";
-import * as selectors from "../../redux/selectors";
-import { Film } from "../../types/types";
 
 const PosterContent: React.FC = () => {
     const dispatch = useDispatch();
@@ -13,7 +16,6 @@ const PosterContent: React.FC = () => {
 
     useEffect(() => {
         dispatch(getFilmToday()); 
-        console.log(films)
     }, []);
 
     return (

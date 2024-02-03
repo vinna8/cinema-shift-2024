@@ -1,7 +1,10 @@
+import { Film } from '../../../types/types';
+
 import greyStar from '../../../assets/grey-star.svg';
 import goldStar from '../../../assets/gold-star.svg';
+
 import * as StyledFilmInfo from '../../../style/StyledFilmInfo';
-import { Film } from '../../../types/types';
+
 
 interface FilmProps {
     film: Film;

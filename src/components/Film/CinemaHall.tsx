@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setPlaces } from '../../redux/action/scheduleFilm';
-import * as StyledFilm from '../../style/StyledFilm';
+
 import { Seance, SelectedPlaces } from '../../types/types';
+import { setPlaces } from '../../redux/action/scheduleFilm';
+
+import * as StyledFilm from '../../style/StyledFilm';
 
 interface SeanceProps {
     seance: Seance | null;

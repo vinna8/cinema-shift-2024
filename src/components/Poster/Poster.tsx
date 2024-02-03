@@ -1,13 +1,16 @@
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
+
+import { Film } from "../../types/types";
+import { getFilm } from "../../redux/action/filmByIdAction";
+import { getSchedule } from "../../redux/action/scheduleFilm";
+
 import Rating from "../FilmInfo/Rating/Rating";
-import * as StyledPoster from '../../style/StyledPoster';
 import Cover from "../FilmInfo/Cover";
 import Button from "../UI-kit/Button";
 import FilmName from "../FilmInfo/FilmName";
-import { Film } from "../../types/types";
-import { useDispatch } from "react-redux";
-import { getFilm } from "../../redux/action/filmByIdAction";
-import { useNavigate } from 'react-router-dom';
-import { getSchedule } from "../../redux/action/scheduleFilm";
+
+import * as StyledPoster from '../../style/StyledPoster';
 
 interface PosterProps {
     film: Film;

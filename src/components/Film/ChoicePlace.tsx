@@ -1,9 +1,12 @@
 import { useSelector } from 'react-redux';
-import * as StyledFilm from '../../style/StyledFilm';
-import * as StyledUIKit from '../../style/StyledUIKit';
+import * as selectors from "../../redux/selectors";
+
 import CinemaHall from './CinemaHall';
 import SelectedPlace from './SelectedPlace'
-import * as selectors from "../../redux/selectors";
+
+import * as StyledFilm from '../../style/StyledFilm';
+import * as StyledUIKit from '../../style/StyledUIKit';
+
 
 const ChoicePlace: React.FC = () => {
     const selectedSeance = useSelector(selectors.seance); 

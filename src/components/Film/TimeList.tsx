@@ -1,8 +1,10 @@
-import Time from './Time';
-import * as StyledFilm from '../../style/StyledFilm';
-import * as selectors from "../../redux/selectors";
-import { useSelector } from "react-redux";
 import { useState, useEffect } from 'react';
+import { useSelector } from "react-redux";
+import * as selectors from "../../redux/selectors";
+
+import Time from './Time';
+
+import * as StyledFilm from '../../style/StyledFilm';
 
 const TimeList: React.FC = () => {
     const schedules = useSelector(selectors.schedules);

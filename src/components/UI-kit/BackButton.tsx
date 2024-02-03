@@ -5,14 +5,13 @@ interface ButtonProps {
     onClick?: () => void;
 }
 
-const BackButton: React.FC<ButtonProps> = ({onClick}) => {
-    return (
-        <ReturnBackButton onClick={onClick}>
-            <img src={ BackIcon } alt="Back Icon"/>
-            <div>Назад</div>
-        </ReturnBackButton>
-    )
-}
+const BackButton: React.FC<ButtonProps> = ({onClick}) => (
+    <ReturnBackButton onClick={onClick}>
+        <img src={ BackIcon } alt="Back Icon"/>
+        <div>Назад</div>
+    </ReturnBackButton>
+)
+
 
 export default BackButton;
 
